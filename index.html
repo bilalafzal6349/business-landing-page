@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Assignment 2</title>
+  </head>
+  <body>
+    <div>
+
+        <!-- hero section -->
+        <div class="hero-section">
+    <Navbar class="navbar">
+      <div>
+        <img src="./images/logo.svg" alt="Logo" />
+      </div>
+      <button class="mobile-menu-btn" type="button" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="services.html">services</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="company.html">Company</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+      <div class="nav-btn desktop-nav-btn">
+        <button>Let’s Talk</button>
+      </div>
+    </Navbar>
+ <hero class="hero">
+
+      <div class="hero-left-content">
+        <div class="hero-upper-text">
+          <img src="./images/verify.svg" alt="verify image" />
+          <p>Best Business Platform - World Record 2021</p>
+        </div>
+
+        <h1>Reach Your Business Goals in Record Time</h1>
+        <p>
+          Support small business and join the nationwide movement to encourage
+          commercial support for the millions of minority owned businesses
+          helping world economy.
+        </p>
+        <div class="hero-btns">
+
+            <button>Get Started</button>
+            <div class="hero-video-circle-btn">
+              <img src="./images/video-circle.svg" alt="play image" width="17px" height="17px" />
+              <p>Watch Video</p>
+            </div>
+        </div>
+      </div>
+      <div class="hero-right-content">
+        <img src="./images/hero-img.png" alt="hero image"  />
+    </hero>
+</div>
+    </div>
+    <!-- marquee  section -->
+<section class="marquee-section">
+    <div class="marquee">       
+       
+        <img src="./images/slack.svg" alt="marquee image" />
+        <img src="./images/prudential.svg" alt="marquee image" />
+        <img src="./images/microsoft.svg" alt="marquee image" />
+        <img src="./images/zoover.svg" alt="marquee image" />
+    </div>
+    </section>
+    <!-- services section  -->
+
+<section class="services-section">
+  <div class="services-inner">
+    <div class="services-left">
+      <h6 class="services-label">SERVICES</h6>
+      <h3 class="services-title">Our Capabilities</h3>
+      <p class="services-desc">We will bring the breathe of our experience and industry knowledge to help you succeed</p>
+    </div>
+    <div class="services-cards">
+      <div class="service-card">
+        <img src="./images/market-forcest.svg" alt="" class="service-card-icon" />
+        <h4 class="service-card-title">Market Forcest</h4>
+        <p class="service-card-desc">Leverage agile framework to provide a robust high level synopsys overviews</p>
+      </div>
+      <div class="service-card">
+        <img src="./images/fund-raising.svg" alt="" class="service-card-icon" />
+        <h4 class="service-card-title">Fund Raising</h4>
+        <p class="service-card-desc">Bring to the table survival strategies to ensure proactive domination</p>
+      </div>
+      <div class="service-card">
+        <img src="./images/cash-flow.svg" alt="" class="service-card-icon" />
+        <h4 class="service-card-title">Cash Flow</h4>
+        <p class="service-card-desc">Grow the holistic world view of disruptive innovation workspace</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+    <script>
+      document.querySelector('.mobile-menu-btn').addEventListener('click', function () {
+        document.querySelector('.navbar').classList.toggle('nav-open');
+      });
+    </script>
+  </body>
+</html>
