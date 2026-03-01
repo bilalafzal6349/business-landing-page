@@ -4,32 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css">
     <title>Assignment 2</title>
   </head>
-  <body>
-    <div>
-
+   <body>
         <!-- hero section -->
         <div class="hero-section">
     <Navbar class="navbar">
       <div>
         <img src="./images/logo.svg" alt="Logo" />
       </div>
-      <button class="mobile-menu-btn" type="button" aria-label="Toggle menu">
-        <span></span>
-        <span></span>
-        <span></span>
+      
+      <button type="button" class="nav-btn mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false">
+        <i class="fa fa-bars" aria-hidden="true"></i>
       </button>
       <ul class="nav-links">
-        <li><a href="services.html">services</a></li>
-        <li><a href="resources.html">Resources</a></li>
-        <li><a href="company.html">Company</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
+        <li ><a class="nav-link" href="services.html">services</a></li>
+
+        <li ><a class="nav-link" href="#"> Resources</a></li>
+        <li><a class="nav-link" href="company.html">Company</a></li>
+        <li><a class="nav-link" href="blog.html">Blog</a></li>
+        <li><a class="nav-link" href="contact.html">Contact Us</a></li>
       </ul>
       <div class="nav-btn desktop-nav-btn">
         <button>Let’s Talk</button>
       </div>
+     
     </Navbar>
  <hero class="hero">
 
@@ -141,7 +141,7 @@
     <section id="contact-section">
       <div class="cs-container">
         <div class="cs-image-side">
-          <span class="cs-image-placeholder">[ PLACE IMAGE HERE ]</span>
+          <img src="./images/contact-img/contact-img.png"  alt="contact image" />
         </div>
         <div class="cs-form-side">
           <span class="cs-tag">CONTACT US</span>
@@ -201,9 +201,19 @@
     </footer>
 
     <script>
-      document.querySelector('.mobile-menu-btn').addEventListener('click', function () {
-        document.querySelector('.navbar').classList.toggle('nav-open');
+      document.addEventListener('DOMContentLoaded', function () {
+        var btn = document.querySelector('.mobile-menu-btn');
+        var nav = document.querySelector('.navbar');
+        var heroSection = document.querySelector('.hero-section');
+        if (btn && nav) {
+          btn.addEventListener('click', function () {
+            nav.classList.toggle('nav-open');
+            if (heroSection) heroSection.classList.toggle('nav-open');
+            btn.setAttribute('aria-expanded', nav.classList.contains('nav-open'));
+          });
+        }
       });
     </script>
-  </body>
+   </body>
+  
 </html>
